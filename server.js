@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 
 import userRoutes from "./routes/userRoutes.js";
+import quizRoutes from "./routes/quizRoutes.js";
 
 import {
   errorHandlerMiddleware,
@@ -33,6 +34,7 @@ app.get("/", (req, res) => {
 
 // routes
 app.use("/api/users", userRoutes);
+app.use("/api/quizzes", quizRoutes);
 
 // error Handellers
 app.use(notFoundMiddleware);

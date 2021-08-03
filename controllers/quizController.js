@@ -1,6 +1,6 @@
 import _ from "lodash";
 import asyncHandler from "express-async-handler";
-import Quiz from "../models/quizModel";
+import Quiz from "../models/quizModel.js";
 
 const getQuizList = asyncHandler(async (req, res) => {
   const quizzes = await Quiz.find(

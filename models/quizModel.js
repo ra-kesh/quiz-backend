@@ -44,7 +44,7 @@ const QuizSchema = mongoose.Schema(
       trim: true,
       required: "Title is required",
     },
-    totalTime: {
+    totalTimeInMinutes: {
       type: String,
       trim: true,
       required: "Total time is required",

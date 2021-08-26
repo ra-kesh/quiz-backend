@@ -2,8 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-
-import userRoutes from "./routes/userRoutes.js";
+// import { fillQuizCollection } from "./models/quizModel.js";
 import quizRoutes from "./routes/quizRoutes.js";
 
 import {
@@ -19,6 +18,8 @@ dotenv.config();
 import connectDB from "./configs/db.js";
 connectDB();
 
+// fillQuizCollection();
+
 //connecting main app
 const app = express();
 app.use(cors());
@@ -33,7 +34,6 @@ app.get("/", (req, res) => {
 });
 
 // routes
-app.use("/api/users", userRoutes);
 app.use("/api/quizzes", quizRoutes);
 
 // error Handellers

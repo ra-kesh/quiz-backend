@@ -1,14 +1,13 @@
 import express from "express";
 import {
-  getQuizList,
+  getAllQuizzes,
   getSingleQuizData,
-  addNewQuiz,
-} from "../controllers/quizController";
+} from "../controllers/quizController.js";
 
-const router = express.Router;
+const router = express.Router();
 
-router.route("/").get(getQuizList).post(addNewQuiz);
+router.get("/", getAllQuizzes);
 
-router.route("/:id").get(getSingleQuizData);
+router.get("/:_id", getSingleQuizData);
 
 export default router;

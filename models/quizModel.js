@@ -1,68 +1,37 @@
 import mongoose from "mongoose";
+import { Quizzes } from "../db/quizData.js";
 
-const optionSchema = mongoose.Schema({
-  text: {
+const OptionSchema = mongoose.Schema({
+  optionName: {
     type: String,
     trim: true,
-    required: "option text is required",
+    required: [true, "option cannot be empty"],
   },
-  isRight: {
+  isCorrect: {
     type: Boolean,
-    required: "Right or not need to declared",
+    required: [true, "isCorrect field cannot be empty"],
   },
 });
 
-const questionSchema = mongoose.Schema({
-  text: {
+const QuestionSchema = mongoose.Schema({
+  questionName: {
     type: String,
     trim: true,
-    required: "Question text is needed",
+    required: [true, "Question field cannot be empty"],
   },
-  positiveMarks: {
-    type: Number,
-    required: "Positive mark is needed",
-  },
-  negativeMarks: {
-    type: Number,
-    required: "Negative mark is needed",
-  },
-  timeInSeconds: {
-    type: Number,
-    required: "Time required in Seconds",
-  },
-  questionImage: {
+  options: [OptionSchema],
+  image: {
     type: String,
-    required: "question Image required",
   },
-  optionList: [optionSchema],
 });
 
 const QuizSchema = mongoose.Schema(
   {
-    title: {
+    name: {
       type: String,
-      trim: true,
-      required: "Title is required",
+      required: [true, "Please provide a name for the quiz"],
     },
-    totalTimeInMinutes: {
-      type: String,
-      trim: true,
-      required: "Total time is required",
-    },
-    totalScore: {
-      type: Number,
-      required: "Total time is required",
-    },
-    totalQuestions: {
-      type: Number,
-      required: "Total no. of Questions is required",
-    },
-    quizImage: {
-      type: String,
-      trim: true,
-      required: "Image is required",
-    },
-    questionList: [questionSchema],
+    questions: [QuestionSchema],
   },
   {
     timeStamps: true,
@@ -71,4 +40,16 @@ const QuizSchema = mongoose.Schema(
 
 const Quiz = mongoose.model("Quiz", QuizSchema);
 
-export default Quiz;
+function fillQuizCollection() {
+  try {
+    Quizzes.forEach(async (quiz) => {
+      const newQuiz = new Quiz(quiz);
+      const savedQuiz = await newQuiz.save();
+      console.log(savedQuiz);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export { Quiz, fillQuizCollection };

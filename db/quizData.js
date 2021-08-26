@@ -230,6 +230,211 @@ export const Quizzes = [
           },
         ],
       },
+      {
+        questionName:
+          "When a Vehicle is parked on the road side during night  ?",
+
+        options: [
+          {
+            optionName: "The vehicle should be locked ",
+            isCorrect: false,
+          },
+          {
+            optionName:
+              "The person having licence to drive such a vehicle should be in the drivers seat ",
+            isCorrect: false,
+          },
+          {
+            optionName: "The park light shall remain lit  ",
+            isCorrect: true,
+          },
+        ],
+      },
+      {
+        questionName: "Fog lamps are used ?",
+
+        options: [
+          {
+            optionName: "During night ",
+            isCorrect: false,
+          },
+          {
+            optionName: "When there is mist",
+            isCorrect: true,
+          },
+          {
+            optionName: "When the opposite vehicle is not using dim light",
+            isCorrect: false,
+          },
+        ],
+      },
+      {
+        questionName: "Zebra lines are meant for ?",
+
+        options: [
+          {
+            optionName: "stopping vehicle.  ",
+            isCorrect: false,
+          },
+          {
+            optionName: "pedestrians crossing ",
+            isCorrect: true,
+          },
+          {
+            optionName: "for giving preference to vehicle ",
+            isCorrect: false,
+          },
+        ],
+      },
+      {
+        questionName: "When an ambulance is approaching  ?",
+
+        options: [
+          {
+            optionName:
+              "allow passage if there are no vehicles from front side",
+            isCorrect: false,
+          },
+          {
+            optionName: "no preference need be given ",
+            isCorrect: false,
+          },
+          {
+            optionName:
+              "the driver shall allow free passage by drawing to the side of the road",
+            isCorrect: true,
+          },
+        ],
+      },
+      {
+        questionName: "Red traffic light indicates  ?",
+
+        options: [
+          {
+            optionName: "vehicle can proceed with caution ",
+            isCorrect: false,
+          },
+          {
+            optionName: "stop the vehicle ",
+            isCorrect: true,
+          },
+          {
+            optionName: "slow down. ",
+            isCorrect: false,
+          },
+        ],
+      },
+      {
+        questionName:
+          "Driver of a motor vehicle shall drive through Parking a vehicle in front of entrance to hospital?",
+
+        options: [
+          {
+            optionName: "Proper ",
+            isCorrect: false,
+          },
+          {
+            optionName: "Improper ",
+            isCorrect: true,
+          },
+          {
+            optionName: "Proper if NO PARKING sign is not provided ",
+            isCorrect: false,
+          },
+        ],
+      },
+      {
+        questionName:
+          "Where the slippery road sign is seen on the road, the driver shal ?",
+
+        options: [
+          {
+            optionName: " reduce the speed by changing the gear ",
+            isCorrect: true,
+          },
+          {
+            optionName: "apply brake  ",
+            isCorrect: false,
+          },
+          {
+            optionName: "proceed in the same speed  ",
+            isCorrect: false,
+          },
+        ],
+      },
+      {
+        questionName: "Overtaking is prohibited in following circumstances  ?",
+
+        options: [
+          {
+            optionName:
+              "when it is likely to cause inconvenience or danger to other traffic ",
+            isCorrect: true,
+          },
+          {
+            optionName: "when the vehicle in front is reducing speed  ",
+            isCorrect: false,
+          },
+          {
+            optionName: "during night  ",
+            isCorrect: false,
+          },
+        ],
+      },
+      {
+        questionName: "Overtaking when approaching a bend ?",
+
+        options: [
+          {
+            optionName: "is permissible ",
+            isCorrect: false,
+          },
+          {
+            optionName: "not permissible ",
+            isCorrect: true,
+          },
+          {
+            optionName: "is permissible with care ",
+            isCorrect: false,
+          },
+        ],
+      },
+      {
+        questionName: " Use of horn prohibited ?",
+
+        options: [
+          {
+            optionName: "Mosque, Church and Temple ",
+            isCorrect: false,
+          },
+          {
+            optionName: "Near Hospital, Courts of Law ",
+            isCorrect: true,
+          },
+          {
+            optionName: "Near Hospital, Courts of Law ",
+            isCorrect: false,
+          },
+        ],
+      },
+      {
+        questionName: "Rear view mirror is used  ?",
+
+        options: [
+          {
+            optionName: "for seeing face",
+            isCorrect: false,
+          },
+          {
+            optionName: "for watching the traffic approaching from behind",
+            isCorrect: true,
+          },
+          {
+            optionName: "for seeing the back seat passenger  ",
+            isCorrect: false,
+          },
+        ],
+      },
     ],
   },
 ];
